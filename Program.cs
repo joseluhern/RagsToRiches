@@ -24,3 +24,5 @@ app.MapRazorPages()
    .WithStaticAssets();
 
 app.Run();
+
+// Added comment for git over it assignment
