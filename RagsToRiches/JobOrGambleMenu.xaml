@@ -8,5 +8,21 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                Text="JOB"
+            />
+            <Button Grid.Column="1"
+                Text="GAMBLE"
+                Clicked="GoToGambleMenu"
+            />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
