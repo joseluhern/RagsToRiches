@@ -20,5 +20,17 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private async void GoToGambleMenu(object? sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChooseGambleGame());
+        }
+
+        private async void GoToJobOrGambleMenu(object? sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new JobOrGambleMenu());
+        }
+
+        
     }
 }

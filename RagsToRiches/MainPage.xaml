@@ -30,6 +30,17 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="GambleGamesButton"
+                Text="chooseGambleGame"
+                Clicked="GoToGambleMenu"/>
+
+            <Button
+                x:Name="jobOrGambleButton"
+                Text="jobOrGambleGame"
+                Clicked="GoToJobOrGambleMenu"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 
