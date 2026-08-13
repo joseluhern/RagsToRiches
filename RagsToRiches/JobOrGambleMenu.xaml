@@ -4,48 +4,50 @@
              x:Class="RagsToRiches.JobOrGambleMenu"
              Title="Carrer Path"
              BackgroundColor="#016D29">
-    <VerticalStackLayout>
-        <Label 
-            Text="Choose How You Will Earn Money"
-            FontSize="Header"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid
-            ColumnSpacing="50"
-            Margin="20" >
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Grid.Row="0"
-                Source="hotline_bling_meme1.png"
-                Aspect="AspectFill"
-                BackgroundColor="#000000" >
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="NavigateToJob"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Grid.Column="0" Grid.Row="1"
-                Text="Job"
-                HorizontalOptions="Center"
-                FontSize="Subtitle"
-                TextColor="#F3C620" />
-            <Image Grid.Column="1" Grid.Row="0"
-                Source="hotline_bling_meme2.png"
-                Aspect="AspectFill"
-                BackgroundColor="#E0080B" >
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="NavigateToGambleMenu"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Grid.Column="1" Grid.Row="1"
-                Text="Gamble"
-                HorizontalOptions="Center"
-                FontSize="Subtitle" />
-        </Grid>
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Choose How You Will Earn Money"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Grid
+                ColumnSpacing="50"
+                Margin="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0"
+                    Source="hotline_bling_meme1.png"
+                    Aspect="AspectFill"
+                    BackgroundColor="#000000" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavigateToJob"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Grid.Column="0" Grid.Row="0"
+                    Text="Job"
+                    HorizontalOptions="Center"
+                    FontSize="Subtitle"
+                    TextColor="#F3C620" />
+                <Image Grid.Column="1" Grid.Row="0"
+                    Source="hotline_bling_meme2.png"
+                    Aspect="AspectFill"
+                    BackgroundColor="#E0080B" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavigateToGambleMenu"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Grid.Column="1" Grid.Row="1"
+                    Text="Gamble"
+                    HorizontalOptions="Center"
+                    FontSize="Subtitle" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
