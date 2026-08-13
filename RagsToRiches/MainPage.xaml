@@ -4,73 +4,78 @@
              x:Class="RagsToRiches.MainPage"
              Title="RagsToRiches"
              Shell.BackgroundColor="Red"
-             Shell.ForegroundColor="White"
-             BackgroundColor="Red">
-    
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+             Shell.ForegroundColor="White">
 
-            <Border
-                Stroke="White"
-                StrokeThickness="10"
-                StrokeShape="RoundRectangle 30"
-                HorizontalOptions="Center">
+    <Grid>
+        <Image
+            Source="mainmenu.jpg"
+            Aspect="AspectFill"/>   
 
-                <Image
-                    Source="winimage.jpg"
-                    HeightRequest="300"
-                    Aspect="AspectFit"/>
-            </Border>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25">
 
-            <Label
-                Text="Rags To Riches"
-                HorizontalOptions="Center"
-                FontSize="40"/>
+                <Border
+                    Stroke="White"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle 30"
+                    HorizontalOptions="Center">
 
-            <Label
-                Text="(This could be you.. who knows play and find out)"
-                HorizontalOptions="Center"/>    
+                    <Image
+                        Source="winimage.jpg"
+                        HeightRequest="300"
+                        Aspect="AspectFit"/>
+                </Border>
 
-            <Label
-                Text="Click Start if you dare..."
-                HorizontalOptions="Center"
-                FontFamily="10"/>
+                <Label
+                    Text="Rags To Riches"
+                    HorizontalOptions="Center"
+                    FontSize="40"/>
 
-            <Button
-                x:Name="StartButton"
-                Text="START"
-                TextColor="Red"
-                FontSize="30"
-                Clicked="GoToJobOrGambleMenu"
-                BackgroundColor="LightGreen"
-                Padding="20"
-                Margin="30"
-                BorderColor="Black"
-                BorderWidth="7"/>   
+                <Label
+                    Text="(This could be you.. who knows play and find out)"
+                    HorizontalOptions="Center"/>    
 
-            <Button
-                x:Name="GambleGamesButton"
-                Text="chooseGambleGame"
-                Clicked="GoToGambleMenu"
-                BackgroundColor="LightBlue"
-                Padding="10"
-                Margin="30"
-                BorderColor="Black"
-                BorderWidth="7"/>  
+                <Label
+                    Text="Click Start if you dare..."
+                    HorizontalOptions="Center"
+                    FontFamily="10"/>
 
-            <Button
-                x:Name="jobOrGambleButton"
-                Text="jobOrGambleGame"
-                Clicked="GoToJobOrGambleMenu"
-                BackgroundColor="LightBlue"
-                Padding="10"
-                Margin="30"
-                BorderColor="Black"
-                BorderWidth="7"/>
+                <Button
+                    x:Name="StartButton"
+                    Text="START"
+                    TextColor="Red"
+                    FontSize="30"
+                    Clicked="GoToJobOrGambleMenu"
+                    BackgroundColor="LightGreen"
+                    Padding="20"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>   
+
+                <Button
+                    x:Name="GambleGamesButton"
+                    Text="chooseGambleGame"
+                    Clicked="GoToGambleMenu"
+                    BackgroundColor="LightBlue"
+                    Padding="10"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>  
+
+                <Button
+                    x:Name="jobOrGambleButton"
+                    Text="jobOrGambleGame"
+                    Clicked="GoToJobOrGambleMenu"
+                    BackgroundColor="LightBlue"
+                    Padding="10"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>
             
-        </VerticalStackLayout>
-    </ScrollView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
