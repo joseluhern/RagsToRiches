@@ -2,27 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RagsToRiches.JobOrGambleMenu"
-             Title="JobOrGambleMenu">
+             Title="Carrer Path"
+             BackgroundColor="#016D29">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Choose How You Will Earn Money"
+            FontSize="Header"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Grid>
+        <Grid
+            ColumnSpacing="50"
+            Margin="20" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0"
-                Text="JOB"
-            />
-            <Button Grid.Column="1"
-                Text="GAMBLE"
-                Clicked="GoToGambleMenu"
-            />
+            <Image Grid.Column="0" Grid.Row="0"
+                Source="hotline_bling_meme1.png"
+                Aspect="AspectFill"
+                BackgroundColor="#000000" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="NavigateToJob"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Column="0" Grid.Row="1"
+                Text="Job"
+                HorizontalOptions="Center"
+                FontSize="Subtitle"
+                TextColor="#F3C620" />
+            <Image Grid.Column="1" Grid.Row="0"
+                Source="hotline_bling_meme2.png"
+                Aspect="AspectFill"
+                BackgroundColor="#E0080B" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="NavigateToGambleMenu"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Column="1" Grid.Row="1"
+                Text="Gamble"
+                HorizontalOptions="Center"
+                FontSize="Subtitle" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
