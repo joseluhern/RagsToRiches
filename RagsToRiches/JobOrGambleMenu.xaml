@@ -8,46 +8,68 @@
         <VerticalStackLayout>
             <Label 
                 Text="Choose How You Will Earn Money"
-                FontSize="Header"
+                FontSize="50"
+                FontFamily="GrandCasino"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Padding="0, 20, 0, 20"/>
             <Grid
                 ColumnSpacing="50"
                 Margin="20" >
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Grid.Row="0"
-                    Source="hotline_bling_meme1.png"
-                    Aspect="AspectFill"
-                    BackgroundColor="#000000" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="NavigateToJob"/>
-                    </Image.GestureRecognizers>
-                </Image>
-                <Label Grid.Column="0" Grid.Row="0"
+                <Border Grid.Column="0"
+                    Stroke="White"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle, 5">
+                    <Image Grid.Column="0"
+                        Source="hotline_bling_meme1.png"
+                        Aspect="AspectFill"
+                        BackgroundColor="#000000" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NavigateToJob"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+                <Label Grid.Column="0"
                     Text="Job"
+                    Shadow="#000000 3 4"
                     HorizontalOptions="Center"
-                    FontSize="Subtitle"
+                    VerticalOptions="Center"
+                    FontSize="100"
                     TextColor="#F3C620" />
-                <Image Grid.Column="1" Grid.Row="0"
-                    Source="hotline_bling_meme2.png"
-                    Aspect="AspectFill"
-                    BackgroundColor="#E0080B" >
+                <Border Grid.Column="1"
+                    Stroke="White"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle, 5" >
+                    <Image Grid.Column="1"
+                        Source="hotline_bling_meme2.png"
+                        Aspect="AspectFill"
+                        BackgroundColor="#E0080B" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="NavigateToGambleMenu"/>
                     </Image.GestureRecognizers>
-                </Image>
-                <Label Grid.Column="1" Grid.Row="1"
+                    </Image>
+                </Border>
+                <Label Grid.Column="1"
                     Text="Gamble"
+                    Shadow="#000000 3 4"
                     HorizontalOptions="Center"
-                    FontSize="Subtitle" />
+                    VerticalOptions="Center"
+                    FontSize="100"
+                    TextColor="#F3C620" />
             </Grid>
+            <Image
+                Source="fanned_out_card_deck.png"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                HeightRequest="400"
+                WidthRequest="400"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
