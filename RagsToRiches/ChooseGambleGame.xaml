@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RagsToRiches.ChooseGambleGame"
-             Title="Choose Your Gambling Game">
+             Title="Choose Your Gambling Game"
+             Shell.BackgroundColor="black"
+             Shell.ForegroundColor="White">
 
     <Grid>
         <Image
@@ -13,19 +15,27 @@
             <VerticalStackLayout>
 
                 <Label
-                        Text="PICK YOUR POISON SCUM!!"
+                        Text="PICK YOUR POISON, SCUM!!"
                         Style="{StaticResource Headline}" />
 
                 <Label
-                        Text="(Please choose one of the following gambling games below"
+                        Text="(Please choose one of the following gambling games below)"
                         Style="{StaticResource SubHeadline}"/>
 
                 <Grid ColumnDefinitions="*,*,*">
-                
-                    <ImageButton
-                        Grid.Column="0"
+
+                    <Grid Grid.Column="0" RowDefinitions="Auto,*">
+
+                        <Label
+                        Grid.Row="0"
+                        Text="Slots"
+                        FontSize="20"
+                        HorizontalOptions="Center"/>
+
+                        <ImageButton
+                        Grid.Row="1"
                         x:Name="slotsGame"
-                        Source="dotnet_bot.png"
+                        Source="slots.jpg"
                         Clicked="GoToSlotsGame"
                         BackgroundColor="Red"
                         Padding="20"
@@ -34,28 +44,49 @@
                         BorderColor="White"
                         BorderWidth="10"/>
 
-                    <Button
-                        Grid.Column="1"
-                        x:Name="blackJackGame"
-                        Text="BLACKJACK"
-                        BackgroundColor="DarkGray"
-                        Padding="20"
-                        Margin="30"
-                        HeightRequest="400"
-                        BorderColor="White"
-                        BorderWidth="10"/>
+                    </Grid>
 
-                    <Button
-                        Grid.Column="2"
-                        x:Name="rouletteGame"
-                        Text="ROULETTE"
-                        BackgroundColor="Green"
-                        Padding="20"
-                        Margin="30"
-                        HeightRequest="400"
-                        BorderColor="White"
-                        BorderWidth="10"/>
-                    
+                    <Grid Grid.Column="1" RowDefinitions="Auto,*">
+
+                        <Label
+                            Grid.Row="0"
+                            Text="Black Jack"
+                            FontSize="20"
+                            HorizontalOptions="Center"/>    
+
+
+                        <ImageButton
+                            Grid.Row="1"
+                            x:Name="blackJackGame"
+                            Source="blackjack.jpg"
+                            BackgroundColor="DarkGray"
+                            Padding="20"
+                            Margin="30"
+                            HeightRequest="400"
+                            BorderColor="White"
+                            BorderWidth="10"/>
+                    </Grid>
+
+                    <Grid Grid.Column="2" RowDefinitions="Auto,*">
+
+                        <Label
+                            Grid.Row="0"
+                            Text="Roulette"
+                            FontSize="20"
+                            HorizontalOptions="Center"/>        
+
+                        <ImageButton
+                            Grid.Row="1"
+                            x:Name="rouletteGame"
+                            Source="roullette.jpg"
+                            BackgroundColor="Green"
+                            Padding="20"
+                            Margin="30"
+                            HeightRequest="400"
+                            BorderColor="White"
+                            BorderWidth="10"/>
+                        
+                    </Grid>
                 </Grid>
 
                 <Button
