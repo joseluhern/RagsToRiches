@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RagsToRiches.GoodEnding"
+             Title="Good Ending"
+             Shell.BackgroundColor="black"
+             Shell.ForegroundColor="White"
+             BackgroundColor="DarkKhaki">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to The good ending yayy!!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
