@@ -20,7 +20,8 @@
                     Stroke="White"
                     StrokeThickness="10"
                     StrokeShape="RoundRectangle 30"
-                    HorizontalOptions="Center">
+                    HorizontalOptions="Center"
+                    Margin="20">
 
                     <Image
                         Source="winimage.jpg"
@@ -31,49 +32,62 @@
                 <Label
                     Text="Rags To Riches"
                     HorizontalOptions="Center"
-                    FontSize="40"/>
+                    TextColor="Blue"
+                    FontSize="40"
+                    FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
 
                 <Label
                     Text="(This could be you.. who knows play and find out)"
-                    HorizontalOptions="Center"/>    
+                    HorizontalOptions="Center"
+                        FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
 
                 <Label
                     Text="Click Start if you dare..."
                     HorizontalOptions="Center"
-                    FontFamily="10"/>
+                    FontFamily="10"
+                        FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
 
                 <Button
                     x:Name="StartButton"
                     Text="START"
                     TextColor="Red"
-                    FontSize="30"
+                    FontSize="100"
                     Clicked="GoToJobOrGambleMenu"
                     BackgroundColor="LightGreen"
-                    Padding="20"
-                    Margin="30"
-                    BorderColor="Black"
-                    BorderWidth="7"/>   
-
-                <Button
-                    x:Name="GambleGamesButton"
-                    Text="chooseGambleGame"
-                    Clicked="GoToGambleMenu"
-                    BackgroundColor="LightBlue"
-                    Padding="10"
+                    Padding="50"
                     Margin="30"
                     BorderColor="Black"
                     BorderWidth="7"/>  
-
-                <Button
-                    x:Name="jobOrGambleButton"
-                    Text="jobOrGambleGame"
-                    Clicked="GoToJobOrGambleMenu"
-                    BackgroundColor="LightBlue"
-                    Padding="10"
-                    Margin="30"
-                    BorderColor="Black"
-                    BorderWidth="7"/>
-            
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

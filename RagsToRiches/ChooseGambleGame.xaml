@@ -16,7 +16,17 @@
 
                 <Label
                         Text="PICK YOUR POISON, SCUM!!"
-                        Style="{StaticResource Headline}" />
+                        Style="{StaticResource Headline}" 
+                        FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+                </Label>
 
                 <Label
                         Text="(Please choose one of the following gambling games below)"

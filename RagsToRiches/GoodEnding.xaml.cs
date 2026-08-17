@@ -6,4 +6,9 @@ public partial class GoodEnding : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void GoToJobOrGambleMenu(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new JobOrGambleMenu());
+    }
 }

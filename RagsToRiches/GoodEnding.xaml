@@ -6,10 +6,44 @@
              Shell.BackgroundColor="black"
              Shell.ForegroundColor="White"
              BackgroundColor="DarkKhaki">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to The good ending yayy!!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid>
+        <!--<Image
+        Source="choosegamebackground.jpg"
+        Aspect="AspectFill"/> -->
+
+        <ScrollView>
+            <VerticalStackLayout>
+
+             <Label
+            Text="YAYYY YOU DID IT THIS IS THE GOOD ENDING"
+            Style="{StaticResource Headline}"
+                FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+                </Label>
+
+                <Label
+            Text="Your a WINNER"
+            Style="{StaticResource SubHeadline}"/>
+
+            <Button
+            x:Name="returnToJobOrGambleGame"
+            Text="let me win again heheheh"
+            Clicked="GoToJobOrGambleMenu"
+            BackgroundColor="LightBlue"
+            Padding="20"
+            Margin="30"
+            BorderColor="Black"
+            BorderWidth="7"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

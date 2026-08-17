@@ -6,10 +6,43 @@
              Shell.BackgroundColor="black"
              Shell.ForegroundColor="White"
              BackgroundColor="Gray">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to the bad ending.........."
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <!--<Image
+            Source="choosegamebackground.jpg"
+            Aspect="AspectFill"/> -->
+
+        <ScrollView>
+            <VerticalStackLayout>
+
+                <Label
+                Text="welcome to the bad ending...."
+                Style="{StaticResource Headline}"
+                FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+                </Label>
+
+                <Label
+                Text="Your a loser"
+                Style="{StaticResource SubHeadline}"/>
+
+                <Button
+                x:Name="returnToJobOrGambleGame"
+                Text="wait noo let me try againn"
+                Clicked="GoToJobOrGambleMenu"
+                BackgroundColor="Red"
+                Padding="20"
+                Margin="30"
+                BorderColor="Black"
+                BorderWidth="7"/>   
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
