@@ -16,7 +16,17 @@
 
                 <Label
                         Text="PICK YOUR POISON, SCUM!!"
-                        Style="{StaticResource Headline}" />
+                        Style="{StaticResource Headline}" 
+                        FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+                </Label>
 
                 <Label
                         Text="(Please choose one of the following gambling games below)"
@@ -59,6 +69,7 @@
                             Grid.Row="1"
                             x:Name="blackJackGame"
                             Source="blackjack.jpg"
+                            Clicked="GoToBlackJack"
                             BackgroundColor="DarkGray"
                             Padding="20"
                             Margin="30"
@@ -79,6 +90,7 @@
                             Grid.Row="1"
                             x:Name="rouletteGame"
                             Source="roullette.jpg"
+                            Clicked="GoToRoulette"
                             BackgroundColor="Green"
                             Padding="20"
                             Margin="30"

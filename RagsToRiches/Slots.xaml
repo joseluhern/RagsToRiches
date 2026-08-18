@@ -2,11 +2,93 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RagsToRiches.Slots"
-             Title="Slots">
-    <VerticalStackLayout>
-        <Label 
-            Text="Work in progresssss (guysss finish mee)"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Slots"
+             Shell.BackgroundColor="black"
+             Shell.ForegroundColor="White"
+             BackgroundColor="Blue">
+
+    <Grid>
+        <!--<Image
+        Source="choosegamebackground.jpg"
+        Aspect="AspectFill"/> -->
+
+        <ScrollView>
+            <VerticalStackLayout>
+
+                <Label
+                    Text="WELCOME TO SLOTS"
+                    Style="{StaticResource Headline}" />
+
+                <Label
+                    Text="Please spin the lever button below (just click it to spin the wheel)"
+                    Style="{StaticResource SubHeadline}"/>
+
+                <Grid ColumnDefinitions="*,*,*">
+
+                    <ImageButton
+                        Grid.Column="0"
+                        x:Name="OneSlot"
+                        Source="dotnet_bot.png"
+                        BackgroundColor="Red"
+                        Padding="20"
+                        Margin="30"
+                        HeightRequest="400"
+                        BorderColor="White"
+                        BorderWidth="10"/>
+
+                    <ImageButton
+                        Grid.Column="1"
+                        x:Name="TwoSlot"
+                        Source="dotnet_bot.png"
+                        BackgroundColor="DarkGray"
+                        Padding="20"
+                        Margin="30"
+                        HeightRequest="400"
+                        BorderColor="White"
+                        BorderWidth="10"/>
+
+                    <ImageButton
+                        Grid.Column="2"
+                        x:Name="ThreeSlot"
+                        Source="dotnet_bot.png"
+                        BackgroundColor="Green"
+                        Padding="20"
+                        Margin="30"
+                        HeightRequest="400"
+                        BorderColor="White"
+                        BorderWidth="10"/>
+                </Grid>
+
+                <Button
+                    x:Name="Lever"
+                    Text="I AM THE LEVER. SPIN ME"
+                    BackgroundColor="DarkGoldenrod"
+                    Padding="20"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>
+
+                <Button
+                    x:Name="GoodEnding"
+                    Text="Good Ending"
+                    Clicked="TheGoodEnding"
+                    BackgroundColor="WhiteSmoke"
+                    Padding="20"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>
+
+                <Button
+                    x:Name="BadEndng"
+                    Text="Bad Ending...."
+                    Clicked="TheBadEnding"
+                    BackgroundColor="Red"
+                    Padding="20"
+                    Margin="30"
+                    BorderColor="Black"
+                    BorderWidth="7"/>   
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

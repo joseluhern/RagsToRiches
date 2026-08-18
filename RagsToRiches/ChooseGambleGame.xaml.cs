@@ -16,4 +16,16 @@ public partial class ChooseGambleGame : ContentPage
     {
         await Navigation.PushAsync(new Slots());
     }
+
+    private async void GoToBlackJack(object? sender, EventArgs e) 
+    {
+        await DisplayAlertAsync(
+            "Coming soon!", "BlackJack will come soon (we hope)....", "okay");
+    }
+
+    private async void GoToRoulette(object? sender, EventArgs e)
+    {
+        await DisplayAlertAsync(
+            "Coming soon!", "Roulette will come soon (we hope)....", "okay");
+    }
 }
