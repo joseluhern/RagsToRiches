@@ -76,6 +76,9 @@
 	  <MauiXaml Update="GoodEnding.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Job.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="JobOrGambleMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -9,7 +9,7 @@ public partial class JobOrGambleMenu : ContentPage
 
     private async void NavigateToJob(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new ChooseGambleGame()); // This link will change when the job mini-game gets made
+        await Navigation.PushAsync(new Job());
     }
 
     private async void NavigateToGambleMenu(object sender, TappedEventArgs e)

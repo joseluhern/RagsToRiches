@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RagsToRiches.Job"
+             Title="Job">
+    <ScrollView>
+        <Grid RowDefinitions="*, *, *"
+              ColumnDefinitions="*, *, *, *">
+            <BoxView x:Name="BoxView1"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCardClick" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView x:Name="BoxView2"
+                     Grid.Column="1"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView3"
+                     Grid.Column="2"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView4"
+                     Grid.Column="3"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView5"
+                     Grid.Row="1"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView6"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView7"
+                     Grid.Row="1"
+                     Grid.Column="2"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView8"
+                     Grid.Row="1"
+                     Grid.Column="3"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView9"
+                     Grid.Row="2"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+            <BoxView x:Name="BoxView10"
+                     Grid.Row="2"
+                     Grid.Column="2"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="NavajoWhite"
+                     HeightRequest="200"
+                     WidthRequest="150"
+                     CornerRadius="15">
+            </BoxView>
+        </Grid>
+    </ScrollView>
+</ContentPage>
