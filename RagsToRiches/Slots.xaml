@@ -25,43 +25,73 @@
 
                 <Grid ColumnDefinitions="*,*,*">
 
-                    <ImageButton
-                        Grid.Column="0"
-                        x:Name="OneSlot"
-                        Source="dotnet_bot.png"
-                        BackgroundColor="Red"
-                        Padding="20"
-                        Margin="30"
-                        HeightRequest="400"
-                        BorderColor="White"
-                        BorderWidth="10"/>
+                    <Grid Grid.Column="0" RowDefinitions="Auto,*">
+                        <Border
+                        Stroke="White"
+                        StrokeThickness="10"
+                        StrokeShape="RoundRectangle 30"
+                        HorizontalOptions="Center"
+                        Margin="20"
+                        Padding="10"
+                        HeightRequest="400">
 
-                    <ImageButton
-                        Grid.Column="1"
-                        x:Name="TwoSlot"
-                        Source="dotnet_bot.png"
-                        BackgroundColor="DarkGray"
-                        Padding="20"
-                        Margin="30"
-                        HeightRequest="400"
-                        BorderColor="White"
-                        BorderWidth="10"/>
+                            <Image
+                            Grid.Column="0"
+                            x:Name="OneSlot"
+                            Source="dotnet_bot.png"
+                            BackgroundColor="Red"
+                            Aspect="AspectFit"
+                            />
+                        </Border>
+                    </Grid>
 
-                    <ImageButton
-                        Grid.Column="2"
-                        x:Name="ThreeSlot"
-                        Source="dotnet_bot.png"
-                        BackgroundColor="Green"
-                        Padding="20"
-                        Margin="30"
-                        HeightRequest="400"
-                        BorderColor="White"
-                        BorderWidth="10"/>
+                    <Grid Grid.Column="1" RowDefinitions="Auto,*">
+
+                        <Border
+                        Stroke="White"
+                        StrokeThickness="10"
+                        StrokeShape="RoundRectangle 30"
+                        HorizontalOptions="Center"
+                        Margin="20"
+                        Padding="10"
+                        HeightRequest="400">
+
+                            <Image
+                            Grid.Column="1"
+                            x:Name="TwoSlot"
+                            Source="dotnet_bot.png"
+                            BackgroundColor="DarkGray"
+                            Aspect="AspectFit"
+                            />      
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="2" RowDefinitions="Auto,*">
+
+                        <Border
+                        Stroke="White"
+                        StrokeThickness="10"
+                        StrokeShape="RoundRectangle 30"
+                        HorizontalOptions="Center"
+                        Margin="20"
+                        Padding="10"
+                        HeightRequest="400">
+
+                            <Image
+                            Grid.Column="2"
+                            x:Name="ThreeSlot"
+                            Source="dotnet_bot.png"
+                            BackgroundColor="Green"
+                            Aspect="AspectFit"
+                            />
+                        </Border>
+                    </Grid>
                 </Grid>
 
                 <Button
                     x:Name="Lever"
                     Text="I AM THE LEVER. SPIN ME"
+                    Clicked="LeverButton"
                     BackgroundColor="DarkGoldenrod"
                     Padding="20"
                     Margin="30"
