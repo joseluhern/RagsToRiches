@@ -5,7 +5,8 @@
              Title="Job">
     <ScrollView>
         <Grid RowDefinitions="*, *, *"
-              ColumnDefinitions="*, *, *, *">
+              ColumnDefinitions="*, *, *, *"
+              x:Name="cardsGrid">
             <BoxView x:Name="BoxView1"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
@@ -85,6 +86,36 @@
                      WidthRequest="150"
                      CornerRadius="15">
             </BoxView>
+            <Image Source="hearts.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="hearts.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="diamonds.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="diamonds.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="spades.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="spades.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="clubs.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="clubs.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="joker.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
+            <Image Source="joker.png"
+                   WidthRequest="80"
+                   IsVisible="True" />
         </Grid>
     </ScrollView>
 </ContentPage>
