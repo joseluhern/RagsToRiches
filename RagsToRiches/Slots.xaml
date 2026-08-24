@@ -8,20 +8,45 @@
              BackgroundColor="Blue">
 
     <Grid>
-        <!--<Image
-        Source="choosegamebackground.jpg"
-        Aspect="AspectFill"/> -->
+        <Image
+        Source="slotsbackground.jpg"
+        Aspect="AspectFill"/>
 
         <ScrollView>
             <VerticalStackLayout>
 
                 <Label
                     Text="WELCOME TO SLOTS"
-                    Style="{StaticResource Headline}" />
+                    HorizontalOptions="Center"
+                    TextColor="Orange"
+                    FontSize="40"
+                    FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
 
                 <Label
                     Text="Please spin the lever button below (just click it to spin the wheel)"
-                    Style="{StaticResource SubHeadline}"/>
+                    HorizontalOptions="Center"
+                    FontFamily="10"
+                    FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
 
                 <Grid ColumnDefinitions="*,*,*">
 
@@ -32,14 +57,13 @@
                         StrokeShape="RoundRectangle 30"
                         HorizontalOptions="Center"
                         Margin="20"
-                        Padding="10"
                         HeightRequest="400">
 
                             <Image
                             Grid.Column="0"
                             x:Name="OneSlot"
-                            Source="dotnet_bot.png"
-                            BackgroundColor="Red"
+                            Source="seven.jpg"
+                            BackgroundColor="White"
                             Aspect="AspectFit"
                             />
                         </Border>
@@ -53,14 +77,13 @@
                         StrokeShape="RoundRectangle 30"
                         HorizontalOptions="Center"
                         Margin="20"
-                        Padding="10"
                         HeightRequest="400">
 
                             <Image
                             Grid.Column="1"
                             x:Name="TwoSlot"
-                            Source="dotnet_bot.png"
-                            BackgroundColor="DarkGray"
+                            Source="seven.jpg"
+                            BackgroundColor="White"
                             Aspect="AspectFit"
                             />      
                         </Border>
@@ -74,25 +97,61 @@
                         StrokeShape="RoundRectangle 30"
                         HorizontalOptions="Center"
                         Margin="20"
-                        Padding="10"
                         HeightRequest="400">
 
                             <Image
                             Grid.Column="2"
                             x:Name="ThreeSlot"
-                            Source="dotnet_bot.png"
-                            BackgroundColor="Green"
+                            Source="seven.jpg"
+                            BackgroundColor="White"
                             Aspect="AspectFit"
                             />
                         </Border>
                     </Grid>
                 </Grid>
 
+                <Label
+                    x:Name="TurnCount"
+                    Text="TURNS LEFT: 10"
+                    HorizontalOptions="Center"
+                    TextColor="White"
+                    FontSize="40"
+                    FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                            Brush="White"
+                            Opacity="1"
+                            Radius="15"
+                            Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
+
+                <Label
+                 x:Name="MoneyCount"
+                 Text="Money: $0000.00"
+                 HorizontalOptions="Center"
+                 TextColor="LightGreen"
+                 FontSize="40"
+                 FontAttributes="Bold"> 
+
+                    <Label.Shadow>
+                        <Shadow
+                             Brush="White"
+                             Opacity="1"
+                             Radius="15"
+                             Offset="0,0"/> 
+                    </Label.Shadow>
+
+                </Label>
+
                 <Button
                     x:Name="Lever"
                     Text="I AM THE LEVER. SPIN ME"
                     Clicked="LeverButton"
-                    BackgroundColor="DarkGoldenrod"
+                    BackgroundColor="Yellow"
+                    FontSize="100"
                     Padding="20"
                     Margin="30"
                     BorderColor="Black"
