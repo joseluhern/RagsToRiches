@@ -4,7 +4,8 @@ namespace RagsToRiches;
 
 public partial class Slots : ContentPage
 {
-    private static Double Money;
+    private static int Money;
+    private int Turns = 10;
 	public Slots()
 	{
 		InitializeComponent();
@@ -13,6 +14,38 @@ public partial class Slots : ContentPage
     private async void LeverButton(object? sender, EventArgs e)
     {
         play();
+
+        TurnCount.Text = $"Turns: {--Turns}";
+        SemanticScreenReader.Announce(TurnCount.Text);
+
+        MoneyCount.Text = $"Money: ${Money}";
+        SemanticScreenReader.Announce(MoneyCount.Text);
+
+        if (Turns <= 0) 
+        {
+            if (Money >= 1000)
+            {
+                await Navigation.PushAsync(new GoodEnding());
+            }
+            else 
+            {
+                await Navigation.PushAsync(new BadEnding());
+            }
+        }
+
+        //if (Turns == 1)
+        //    TurnCount.Text = $"Turns: {--Turns}";
+        //else
+        //    TurnCount.Text = $"Turns: {--Turns}";
+
+        //SemanticScreenReader.Announce(TurnCount.Text);
+
+        //if (Money == 1)
+        //    MoneyCount.Text = $"Money: ${Money}";
+        //else
+        //    MoneyCount.Text = $"Money: ${Money}";
+
+        //SemanticScreenReader.Announce(MoneyCount.Text);
     }
 
 
@@ -74,15 +107,15 @@ public partial class Slots : ContentPage
         if(OneSlot == TwoSlot && OneSlot == ThreeSlot && TwoSlot == ThreeSlot)
         {
             Console.WriteLine("JACKPOT");
-            Money += 500.00;
+            Money += 2000;
         } else if(OneSlot == TwoSlot || OneSlot == ThreeSlot || TwoSlot == ThreeSlot)
         {
             Console.WriteLine("SLIGHT BONUS");
-            Money += 300.00;
+            Money += 700;
         } else
         {
             Console.WriteLine("WHOMP WHOMP NO SCORE");
-            Money -= 400.00;
+            Money -= 400;
         }
 
     }
