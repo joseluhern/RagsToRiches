@@ -130,7 +130,7 @@
 
                 <Label
                  x:Name="MoneyCount"
-                 Text="Money: $0000.00"
+                 Text="Money: $0.00"
                  HorizontalOptions="Center"
                  TextColor="LightGreen"
                  FontSize="40"
@@ -156,26 +156,6 @@
                     Margin="30"
                     BorderColor="Black"
                     BorderWidth="7"/>
-
-                <Button
-                    x:Name="GoodEnding"
-                    Text="Good Ending"
-                    Clicked="TheGoodEnding"
-                    BackgroundColor="WhiteSmoke"
-                    Padding="20"
-                    Margin="30"
-                    BorderColor="Black"
-                    BorderWidth="7"/>
-
-                <Button
-                    x:Name="BadEndng"
-                    Text="Bad Ending...."
-                    Clicked="TheBadEnding"
-                    BackgroundColor="Red"
-                    Padding="20"
-                    Margin="30"
-                    BorderColor="Black"
-                    BorderWidth="7"/>   
 
             </VerticalStackLayout>
         </ScrollView>

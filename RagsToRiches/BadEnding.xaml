@@ -17,7 +17,8 @@
                 <Label
                 Text="welcome to the bad ending...."
                 Style="{StaticResource Headline}"
-                FontAttributes="Bold">
+                FontAttributes="Bold"
+                FontSize="50">
 
                     <Label.Shadow>
                         <Shadow
@@ -30,7 +31,26 @@
 
                 <Label
                 Text="Your a loser"
+                FontSize="40"
                 Style="{StaticResource SubHeadline}"/>
+
+                <Label
+                 x:Name="MoneyCount"
+                 Text="Money: $0.00"
+                 HorizontalOptions="Center"
+                 TextColor="Red"
+                 FontSize="100"
+                 FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                         Brush="White"
+                         Opacity="1"
+                         Radius="15"
+                         Offset="0,0"/> 
+                    </Label.Shadow>
+
+                </Label>
 
                 <Button
                 x:Name="returnToJobOrGambleGame"
@@ -40,7 +60,8 @@
                 Padding="20"
                 Margin="30"
                 BorderColor="Black"
-                BorderWidth="7"/>   
+                BorderWidth="7"
+                FontSize="70"/>   
 
             </VerticalStackLayout>
         </ScrollView>

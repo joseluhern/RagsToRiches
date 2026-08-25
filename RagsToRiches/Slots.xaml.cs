@@ -25,29 +25,16 @@ public partial class Slots : ContentPage
         {
             if (Money >= 1000)
             {
-                await Navigation.PushAsync(new GoodEnding());
+                await Navigation.PushAsync(new GoodEnding(Money));
+                Money = 0;
             }
             else 
             {
-                await Navigation.PushAsync(new BadEnding());
+                await Navigation.PushAsync(new BadEnding(Money));
+                Money = 0;
             }
         }
-
-        //if (Turns == 1)
-        //    TurnCount.Text = $"Turns: {--Turns}";
-        //else
-        //    TurnCount.Text = $"Turns: {--Turns}";
-
-        //SemanticScreenReader.Announce(TurnCount.Text);
-
-        //if (Money == 1)
-        //    MoneyCount.Text = $"Money: ${Money}";
-        //else
-        //    MoneyCount.Text = $"Money: ${Money}";
-
-        //SemanticScreenReader.Announce(MoneyCount.Text);
     }
-
 
     public void play()
     {
@@ -127,14 +114,4 @@ public partial class Slots : ContentPage
         return randMan.Next(1,9 + 1);
     }
 
-
-    private async void TheGoodEnding(object? sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new GoodEnding());
-    }
-
-    private async void TheBadEnding(object? sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new BadEnding());
-    }
 }

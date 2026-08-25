@@ -2,10 +2,13 @@ namespace RagsToRiches;
 
 public partial class BadEnding : ContentPage
 {
-	public BadEnding()
+	public BadEnding(int Money)
 	{
 		InitializeComponent();
-	}
+
+        MoneyCount.Text = $"Money: ${Money}";
+        SemanticScreenReader.Announce(MoneyCount.Text);
+    }
 
     private async void GoToJobOrGambleMenu(object? sender, EventArgs e)
     {

@@ -17,6 +17,7 @@
 
              <Label
             Text="YAYYY YOU DID IT THIS IS THE GOOD ENDING"
+            FontSize="50"
             Style="{StaticResource Headline}"
                 FontAttributes="Bold">
 
@@ -31,9 +32,28 @@
 
                 <Label
             Text="Your a WINNER"
+            FontSize="40"
             Style="{StaticResource SubHeadline}"/>
 
-            <Button
+                <Label
+                 x:Name="MoneyCount"
+                 Text="Money: $0.00"
+                 HorizontalOptions="Center"
+                 TextColor="LightGreen"
+                 FontSize="100"
+                 FontAttributes="Bold">
+
+                    <Label.Shadow>
+                        <Shadow
+                             Brush="White"
+                             Opacity="1"
+                             Radius="15"
+                             Offset="0,0"/>
+                    </Label.Shadow>
+
+                </Label>
+
+                <Button
             x:Name="returnToJobOrGambleGame"
             Text="let me win again heheheh"
             Clicked="GoToJobOrGambleMenu"
@@ -41,7 +61,8 @@
             Padding="20"
             Margin="30"
             BorderColor="Black"
-            BorderWidth="7"/>
+            BorderWidth="7"
+            FontSize="70"/>
 
             </VerticalStackLayout>
         </ScrollView>
