@@ -1,10 +1,12 @@
 using Microsoft.Maui.Controls;
 using Windows.Media.Audio;
+using Windows.Security.Cryptography.Core;
 
 namespace RagsToRiches;
 
 public partial class Job : ContentPage
 {
+    private List<List<int>> cardCoords = new List<List<int>> { };
 	public Job()
 	{
 		InitializeComponent();
@@ -15,11 +17,6 @@ public partial class Job : ContentPage
         base.OnAppearing();
 
         CardShuffle();
-    }
-
-    private void OnCardClick(object sender, TappedEventArgs e)
-    {
-
     }
 
 	private void CardShuffle()
@@ -50,6 +47,42 @@ public partial class Job : ContentPage
                     Grid.SetColumnSpan(image, 2);
                 }
                 cardListIndex++;
+            }
+        }
+    }
+
+    private ImageSource GetCardSource(int row, int col)
+    {
+        var imageSource = cardsGrid.Children
+            .FirstOrDefault(child => Grid.GetRow((BindableObject)child) == row &&
+            Grid.GetColumn((BindableObject)child) == col);
+        if(imageSource is Image image)
+        {
+            return image.Source;
+        }
+        return null!;
+    }
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        var currentCard = sender as ImageButton;
+
+        if(currentCard != null)
+        {
+            currentCard?.IsVisible = false;
+            if(cardCoords.Count < 2)
+            {
+                cardCoords.Add(new List<int> { Grid.GetRow(currentCard), Grid.GetColumn(currentCard) });
+
+                if (cardCoords.Count == 2)
+                {
+                    if (GetCardSource(cardCoords[0][0], cardCoords[0][1]) == GetCardSource(cardCoords[1][0], cardCoords[1][1]))
+                    {
+                        // Cards match
+                    }
+                    // Make a way for all cards to flip face down again
+                    cardCoords.Clear();
+                }
             }
         }
     }

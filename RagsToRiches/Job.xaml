@@ -10,38 +10,35 @@
             <BoxView x:Name="BoxView1"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
-                <BoxView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnCardClick" />
-                </BoxView.GestureRecognizers>
             </BoxView>
             <BoxView x:Name="BoxView2"
                      Grid.Column="1"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView3"
                      Grid.Column="2"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView4"
                      Grid.Column="3"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView5"
                      Grid.Row="1"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView6"
@@ -49,7 +46,7 @@
                      Grid.Column="1"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView7"
@@ -57,7 +54,7 @@
                      Grid.Column="2"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView8"
@@ -65,7 +62,7 @@
                      Grid.Column="3"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView9"
@@ -74,7 +71,7 @@
                      Grid.ColumnSpan="2"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <BoxView x:Name="BoxView10"
@@ -83,7 +80,7 @@
                      Grid.ColumnSpan="2"
                      BackgroundColor="NavajoWhite"
                      HeightRequest="200"
-                     WidthRequest="150"
+                     WidthRequest="132"
                      CornerRadius="15">
             </BoxView>
             <Image Source="hearts.png"
@@ -116,6 +113,61 @@
             <Image Source="joker.png"
                    WidthRequest="80"
                    IsVisible="True" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="1"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="2"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="3"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Row="1"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="2"
+                         Grid.Row="1"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="3"
+                         Grid.Row="1"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="2"
+                         Clicked="ImageButton_Clicked" />
+            <ImageButton Source="card_back.png"
+                         HeightRequest="200"
+                         WidthRequest="140"
+                         Grid.Column="2"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="2"
+                         Clicked="ImageButton_Clicked" />
         </Grid>
     </ScrollView>
 </ContentPage>
