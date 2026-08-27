@@ -13,35 +13,63 @@
 
         <ScrollView>
             <VerticalStackLayout>
-
-                <Label
+                <Border
+                    Stroke="White"
+                    StrokeThickness="4"
+                    HorizontalOptions="Center"
+                    Background="Black"
+                    Margin="20"
+                    Padding="20">
+                    <StackLayout>
+                    <Label
                         Text="PICK YOUR POISON, SCUM!!"
                         Style="{StaticResource Headline}" 
-                        FontAttributes="Bold">
+                        FontAttributes="Bold"
+                        >
 
-                    <Label.Shadow>
-                        <Shadow
+                        <Label.Shadow>
+                            <Shadow
                             Brush="White"
                             Opacity="1"
                             Radius="15"
                             Offset="0,0"/>
-                    </Label.Shadow>
-                </Label>
+                        </Label.Shadow>
+                    </Label>
 
-                <Label
+
+                    <Label
                         Text="(Please choose one of the following gambling games below)"
-                        Style="{StaticResource SubHeadline}"/>
+                        Style="{StaticResource SubHeadline}"
+                        Padding="15"/>
+                    </StackLayout>
+                </Border>
 
                 <Grid ColumnDefinitions="*,*,*">
 
                     <Grid Grid.Column="0" RowDefinitions="Auto,*">
 
-                        <Label
-                        Grid.Row="0"
-                        Text="Slots"
-                        FontSize="20"
-                        HorizontalOptions="Center"/>
+                        <Border Stroke="White"
+                             StrokeThickness="4"
+                             HorizontalOptions="Center"
+                             Background="Black"
+                             Margin="20">
+                            <Label
+                            Grid.Row="0"
+                            Text="Slots"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Padding="15">
 
+                                <Label.Shadow>
+                                <Shadow
+                                Brush="White"
+                                Opacity="1"
+                                Radius="15"
+                                Offset="0,0"/>
+                            </Label.Shadow>
+                        </Label>
+                        </Border>
+                        
                         <ImageButton
                         Grid.Row="1"
                         x:Name="slotsGame"
@@ -58,12 +86,28 @@
 
                     <Grid Grid.Column="1" RowDefinitions="Auto,*">
 
+                        <Border
+                            Stroke="White"
+                            StrokeThickness="4"
+                            HorizontalOptions="Center"
+                            Background="Black"
+                            Margin="20">
                         <Label
                             Grid.Row="0"
                             Text="Black Jack"
                             FontSize="20"
-                            HorizontalOptions="Center"/>    
+                            HorizontalOptions="Center"
+                            Padding="15">
 
+                            <Label.Shadow>
+                                <Shadow
+                                Brush="White"
+                                Opacity="1"
+                                Radius="15"
+                                Offset="0,0"/>
+                            </Label.Shadow>
+                        </Label>
+                        </Border>   
 
                         <ImageButton
                             Grid.Row="1"
@@ -80,12 +124,30 @@
 
                     <Grid Grid.Column="2" RowDefinitions="Auto,*">
 
-                        <Label
+                        <Border 
+                            Stroke="White"
+                            StrokeThickness="4"
+                            HorizontalOptions="Center"
+                            Background="Black"
+                            Margin="20">
+                            
+                           <Label
                             Grid.Row="0"
                             Text="Roulette"
                             FontSize="20"
-                            HorizontalOptions="Center"/>        
+                            HorizontalOptions="Center"
+                            Padding="15">
 
+                            <Label.Shadow>
+                                <Shadow
+                                Brush="White"
+                                Opacity="1"
+                                Radius="15"
+                                Offset="0,0"/>  
+                            </Label.Shadow>
+                        </Label>        
+                        </Border>
+                        
                         <ImageButton
                             Grid.Row="1"
                             x:Name="rouletteGame"
@@ -103,13 +165,16 @@
 
                 <Button
                     x:Name="returnToJobOrGambleGame"
-                    Text="IM SCARED RETURN ME"
+                    Text="AHHH IM SCARED RETURN ME!!"
                     Clicked="GoToJobOrGambleMenu"
                     BackgroundColor="LightBlue"
                     Padding="20"
                     Margin="30"
                     BorderColor="Black"
-                    BorderWidth="7"/>       
+                    BorderWidth="7"
+                    WidthRequest="400"
+                   
+                    FontSize="20"/>       
 
             </VerticalStackLayout>
         </ScrollView>

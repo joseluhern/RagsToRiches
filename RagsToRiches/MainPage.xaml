@@ -29,14 +29,24 @@
                         Aspect="AspectFit"/>
                 </Border>
 
-                <Label
+                <Border
+                    Stroke="White"
+                    StrokeThickness="10"
+                    HorizontalOptions="Center"
+                    Margin="10"
+                    >
+                    
+                    <Label
                     Text="Rags To Riches"
                     HorizontalOptions="Center"
-                    TextColor="Blue"
-                    FontSize="40"
-                    FontAttributes="Bold">
-
-                    <Label.Shadow>
+                    TextColor="Gold"
+                    FontSize="150"
+                    FontAttributes="Bold"
+                    Background="DarkRed"
+                    Padding="40,60,40,0"
+                    
+                    FontFamily="GrandCasino">
+                        <Label.Shadow>
                         <Shadow
                             Brush="White"
                             Opacity="1"
@@ -45,46 +55,62 @@
                     </Label.Shadow>
 
                 </Label>
+                </Border>
 
-                <Label
-                    Text="(This could be you.. who knows play and find out)"
+                <Border
+                    Stroke="White"
+                    StrokeThickness="4"
                     HorizontalOptions="Center"
-                        FontAttributes="Bold">
-
-                    <Label.Shadow>
-                        <Shadow
-                            Brush="White"
-                            Opacity="1"
-                            Radius="15"
-                            Offset="0,0"/>
-                    </Label.Shadow>
-
-                </Label>
-
-                <Label
-                    Text="Click Start if you dare..."
+                    Background="Black">
+                    <StackLayout>
+                    <Label
+                    Text="(This could be you.... who knows play and find out...)"
                     HorizontalOptions="Center"
-                    FontFamily="10"
-                        FontAttributes="Bold">
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        Background="Black"
+                        Padding="15"
+                        FontFamily="GrandCasino">
 
-                    <Label.Shadow>
-                        <Shadow
+                        <Label.Shadow>
+                            <Shadow
                             Brush="White"
                             Opacity="1"
                             Radius="15"
                             Offset="0,0"/>
-                    </Label.Shadow>
+                        </Label.Shadow>
 
-                </Label>
+                    </Label>
+
+                        <Label
+                        Text="Click Start if you dare"
+                        HorizontalOptions="Center"
+                            FontAttributes="Bold"
+                            Background="Black"
+                            Padding="15"
+                            FontFamily="GrandCasino">
+
+                            <Label.Shadow>
+                                <Shadow
+                                Brush="White"
+                                Opacity="1"
+                                Radius="15"
+                                Offset="0,0"/>  
+                            </Label.Shadow>
+
+                        </Label>
+                    </StackLayout>
+                </Border>
 
                 <Button
                     x:Name="StartButton"
                     Text="START"
                     TextColor="Red"
-                    FontSize="100"
+                    FontSize="30"
                     Clicked="GoToJobOrGambleMenu"
                     BackgroundColor="LightGreen"
-                    Padding="50"
+                    WidthRequest="200"
+                    Padding="10"
                     Margin="30"
                     BorderColor="Black"
                     BorderWidth="7"/>  

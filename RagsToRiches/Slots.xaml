@@ -15,6 +15,15 @@
         <ScrollView>
             <VerticalStackLayout>
 
+                <Border
+                    Stroke="White"
+                    StrokeThickness="4"
+                    HorizontalOptions="Center"
+                    Background="Black"
+                    Margin="20"
+                    Padding="20">
+                    
+                <StackLayout>
                 <Label
                     Text="WELCOME TO SLOTS"
                     HorizontalOptions="Center"
@@ -47,6 +56,10 @@
                     </Label.Shadow>
 
                 </Label>
+
+                </StackLayout>
+                </Border>
+                
 
                 <Grid ColumnDefinitions="*,*,*">
 
@@ -110,6 +123,14 @@
                     </Grid>
                 </Grid>
 
+                <Border
+                    Stroke="White"
+                    StrokeThickness="4"
+                    HorizontalOptions="Center"
+                    Background="Black"
+                    Margin="20"
+                    Padding="20">
+                <StackLayout>
                 <Label
                     x:Name="TurnCount"
                     Text="TURNS LEFT: 10"
@@ -145,6 +166,10 @@
                     </Label.Shadow>
 
                 </Label>
+
+                </StackLayout>
+                </Border>
+                
 
                 <Button
                     x:Name="Lever"
