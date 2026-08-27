@@ -15,6 +15,14 @@
         <ScrollView>
             <VerticalStackLayout>
 
+                <Border
+                    Stroke="White"
+                    StrokeThickness="4"
+                    HorizontalOptions="Center"
+                    Background="Black"
+                    Margin="20"
+                    Padding="20">
+                    <StackLayout>
              <Label
             Text="YAYYY YOU DID IT THIS IS THE GOOD ENDING"
             FontSize="50"
@@ -34,12 +42,34 @@
             Text="Your a WINNER"
             FontSize="40"
             Style="{StaticResource SubHeadline}"/>
+                </StackLayout>
+                </Border>
 
+                <Border
+                    Stroke="White"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle 30"
+                    HorizontalOptions="Center"
+                    Margin="20">
+
+                    <Image
+                    Source="winimage.jpg"
+                    HeightRequest="300"
+                    Aspect="AspectFit"/>
+                </Border>
+
+                <Border
+                     Stroke="White"
+                     StrokeThickness="4"
+                     HorizontalOptions="Center"
+                     Background="White"
+                     Margin="20"
+                     Padding="20">
                 <Label
                  x:Name="MoneyCount"
                  Text="Money: $0.00"
                  HorizontalOptions="Center"
-                 TextColor="LightGreen"
+                 TextColor="DarkGreen"
                  FontSize="100"
                  FontAttributes="Bold">
 
@@ -52,6 +82,7 @@
                     </Label.Shadow>
 
                 </Label>
+                </Border>
 
                 <Button
             x:Name="returnToJobOrGambleGame"
