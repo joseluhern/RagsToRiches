@@ -5,12 +5,13 @@
              Title="Good Ending"
              Shell.BackgroundColor="black"
              Shell.ForegroundColor="White"
-             BackgroundColor="DarkKhaki">
+             BackgroundColor="DarkKhaki"
+             Shell.NavBarIsVisible="False">
 
     <Grid>
-        <!--<Image
-        Source="choosegamebackground.jpg"
-        Aspect="AspectFill"/> -->
+        <Image
+        Source="winbackground.jpg"
+        Aspect="AspectFill"/>
 
         <ScrollView>
             <VerticalStackLayout>
@@ -53,14 +54,14 @@
                     Margin="20">
 
                     <Image
-                    Source="winimage.jpg"
-                    HeightRequest="300"
+                    Source="smallwin.jpg"
+                    HeightRequest="400"
                     Aspect="AspectFit"/>
                 </Border>
 
                 <Border
-                     Stroke="White"
-                     StrokeThickness="4"
+                     Stroke="Black"
+                     StrokeThickness="10"
                      HorizontalOptions="Center"
                      Background="White"
                      Margin="20"

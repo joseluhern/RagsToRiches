@@ -5,11 +5,12 @@
              Title="Bad Ending"
              Shell.BackgroundColor="black"
              Shell.ForegroundColor="White"
-             BackgroundColor="Gray">
+             BackgroundColor="Gray"
+             Shell.NavBarIsVisible="False">
     <Grid>
-        <!--<Image
-            Source="choosegamebackground.jpg"
-            Aspect="AspectFill"/> -->
+        <Image
+            Source="losebackground.jpg"
+            Aspect="AspectFill"/> 
 
         <ScrollView>
             <VerticalStackLayout>
@@ -52,15 +53,15 @@
                     HorizontalOptions="Center"
                     Margin="20">
 
-                                <Image
-                        Source="winimage.jpg"
-                        HeightRequest="300"
+                  <Image
+                        Source="losesmall.jpg"
+                        HeightRequest="400"
                         Aspect="AspectFit"/>
                 </Border>
 
                 <Border
-                    Stroke="White"
-                    StrokeThickness="4"
+                    Stroke="Black"
+                    StrokeThickness="10"
                     HorizontalOptions="Center"
                     Background="White"
                     Margin="20"
