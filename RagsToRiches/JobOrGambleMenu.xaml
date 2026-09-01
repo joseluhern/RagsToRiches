@@ -3,50 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RagsToRiches.JobOrGambleMenu"
              Title="Carrer Path"
-             BackgroundImageSource="green_felt_background.png">
+             BackgroundImageSource="path_menu.png"
+             Shell.NavBarIsVisible="False">
     <ScrollView>
-        <Grid>
-            <Image
-                Source="poker_chips.png"
-                HorizontalOptions="End"
-                VerticalOptions="Start"
-                HeightRequest="200"
-                WidthRequest="200" />
-            <Image
-                Source="fanned_out_card_deck.png"
-                HorizontalOptions="Start"
-                VerticalOptions="End"
-                HeightRequest="250"
-                WidthRequest="250" />
-            <Grid RowDefinitions="100, *, *"
-                  ColumnDefinitions="*, *"
-                  ColumnSpacing="50"
-                  Margin="20"
-                  VerticalOptions="Fill"
-                  HorizontalOptions="Fill" >
-                <Label Grid.Column="0"
-                       Grid.Row="0"
-                       Grid.ColumnSpan="2"
-                       Text="Choose How You Will Earn Money"
+        <Grid RowDefinitions="150, *, *"
+              ColumnDefinitions="*, *"
+              ColumnSpacing="50"
+              Margin="20"
+              VerticalOptions="Fill"
+              HorizontalOptions="Fill" >
+            <Border Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="Black"
+                    Stroke="#F3C620"
+                    StrokeShape="10"
+                    StrokeThickness="5"
+                    Padding="20, 20, 20, 0">
+                <Label Text="Choose How You Will Earn Money"
                        FontSize="50"
-                       FontFamily="GrandCasino"
-                       VerticalOptions="Center" 
-                       HorizontalOptions="Center"/>
-                <Border Grid.Row="1"
-                        Grid.Column="0"
-                        Stroke="White"
-                        StrokeThickness="10"
-                        StrokeShape="RoundRectangle, 5">
-                    <Image Grid.Row="1"
-                           Grid.Column="0"
-                           Source="hotline_bling_meme1.png"
-                           Aspect="AspectFill"
-                           BackgroundColor="#000000" >
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="NavigateToJob"/>
-                        </Image.GestureRecognizers>
-                    </Image>
-                </Border>
+                       FontFamily="GrandCasino" />
+            </Border>
+            <Border Grid.Row="1"
+                    Grid.Column="0"
+                    Stroke="White"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle, 5">
+                <Image Grid.Row="1"
+                       Grid.Column="0"
+                       Source="hotline_bling_meme1.png"
+                       Aspect="AspectFill"
+                       BackgroundColor="#000000" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavigateToJob"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Border>
                 <Label Grid.Row="1"
                        Grid.Column="0"
                        Text="Job"
@@ -54,7 +48,11 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        FontSize="100"
-                       TextColor="#F3C620" />
+                       TextColor="#F3C620">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavigateToJob"/>
+                    </Label.GestureRecognizers>
+                </Label>
                 <Border Grid.Row="1"
                         Grid.Column="1"
                         Stroke="White"
@@ -77,8 +75,11 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        FontSize="100"
-                       TextColor="#F3C620" />
+                       TextColor="#F3C620" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavigateToGambleMenu"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </Grid>
-        </Grid>
     </ScrollView>
 </ContentPage>

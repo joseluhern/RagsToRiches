@@ -2,181 +2,238 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RagsToRiches.Job"
-             Title="Job">
+             Title="Job"
+             BackgroundImageSource="job_background.png"
+             Shell.NavBarIsVisible="False">
     <ScrollView>
-        <Grid RowDefinitions="*, *, *, *"
-              ColumnDefinitions="*, *, *, *"
-              x:Name="cardsGrid">
-            <BoxView x:Name="BoxView1"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView2"
-                     Grid.Column="1"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView3"
-                     Grid.Column="2"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView4"
-                     Grid.Column="3"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView5"
-                     Grid.Row="1"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView6"
-                     Grid.Row="1"
-                     Grid.Column="1"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView7"
-                     Grid.Row="1"
-                     Grid.Column="2"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView8"
-                     Grid.Row="1"
-                     Grid.Column="3"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView9"
-                     Grid.Row="2"
-                     Grid.Column="0"
-                     Grid.ColumnSpan="2"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <BoxView x:Name="BoxView10"
-                     Grid.Row="2"
-                     Grid.Column="2"
-                     Grid.ColumnSpan="2"
-                     BackgroundColor="NavajoWhite"
-                     HeightRequest="200"
-                     WidthRequest="132"
-                     CornerRadius="15">
-            </BoxView>
-            <Image Source="hearts.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="hearts.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="diamonds.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="diamonds.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="spades.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="spades.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="clubs.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="clubs.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="joker.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <Image Source="joker.png"
-                   WidthRequest="80"
-                   IsVisible="True" />
-            <ImageButton Source="card_back.png"
+        <VerticalStackLayout>
+            <Border Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="Black"
+                    Stroke="#F3C620"
+                    StrokeShape="10"
+                    StrokeThickness="5"
+                    Padding="20, 20, 20, 0"
+                    Margin="20">
+                <Label Text="Job Minigame"
+                       FontSize="50"
+                       FontFamily="GrandCasino" />
+            </Border>
+            <Grid RowDefinitions="225, 225, 225"
+                  ColumnDefinitions="*, *, *, *"
+                  x:Name="cardsGrid">
+                <BoxView x:Name="BoxView1"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
-                         HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView2"
                          Grid.Column="1"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView3"
                          Grid.Column="2"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView4"
                          Grid.Column="3"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView5"
                          Grid.Row="1"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView6"
+                         Grid.Row="1"
                          Grid.Column="1"
-                         Grid.Row="1"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView7"
+                         Grid.Row="1"
                          Grid.Column="2"
-                         Grid.Row="1"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView8"
+                         Grid.Row="1"
                          Grid.Column="3"
-                         Grid.Row="1"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView9"
                          Grid.Row="2"
+                         Grid.Column="0"
                          Grid.ColumnSpan="2"
-                         Clicked="ImageButton_Clicked" />
-            <ImageButton Source="card_back.png"
+                         BackgroundColor="NavajoWhite"
                          HeightRequest="200"
-                         WidthRequest="140"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <BoxView x:Name="BoxView10"
+                         Grid.Row="2"
                          Grid.Column="2"
-                         Grid.Row="2"
                          Grid.ColumnSpan="2"
-                         Clicked="ImageButton_Clicked" />
+                         BackgroundColor="NavajoWhite"
+                         HeightRequest="200"
+                         WidthRequest="132"
+                         CornerRadius="15">
+                    <BoxView.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity=".8" />
+                    </BoxView.Shadow>
+                </BoxView>
+                <Image Source="hearts.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="hearts.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="diamonds.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="diamonds.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="spades.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="spades.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="clubs.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="clubs.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="joker.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <Image Source="joker.png"
+                       WidthRequest="80"
+                       IsVisible="True" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="1"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="2"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="3"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Row="1"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="1"
+                             Grid.Row="1"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="2"
+                             Grid.Row="1"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="3"
+                             Grid.Row="1"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Row="2"
+                             Grid.ColumnSpan="2"
+                             Clicked="ImageButton_Clicked" />
+                <ImageButton Source="card_back.png"
+                             HeightRequest="200"
+                             WidthRequest="140"
+                             Grid.Column="2"
+                             Grid.Row="2"
+                             Grid.ColumnSpan="2"
+                             Clicked="ImageButton_Clicked" />
+            </Grid>
             <Label x:Name="MoneyDisplay"
-                   Grid.Row="3"
-                   Grid.ColumnSpan="4"
                    Text="Money: $0"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    Padding="50"
                    FontSize="40"
                    TextColor="LightGreen"/>
-        </Grid>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
