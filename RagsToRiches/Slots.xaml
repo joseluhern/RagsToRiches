@@ -5,7 +5,8 @@
              Title="Slots"
              Shell.BackgroundColor="black"
              Shell.ForegroundColor="White"
-             BackgroundColor="Blue">
+             BackgroundColor="Blue"
+             Shell.NavBarIsVisible="False">
 
     <Grid>
         <Image

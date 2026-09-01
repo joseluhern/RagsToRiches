@@ -4,7 +4,8 @@
              x:Class="RagsToRiches.MainPage"
              Title="RagsToRiches"
              Shell.BackgroundColor="Red"
-             Shell.ForegroundColor="White">
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White">
 
     <Grid>
         <Image
