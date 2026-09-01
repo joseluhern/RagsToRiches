@@ -1,4 +1,6 @@
 using Microsoft.Maui.Controls;
+using System.Diagnostics;
+using System.Reflection;
 using Windows.Media.Audio;
 using Windows.Security.Cryptography.Core;
 
@@ -6,8 +8,10 @@ namespace RagsToRiches;
 
 public partial class Job : ContentPage
 {
+    private static int Money;
     private List<List<int>> cardCoords = new List<List<int>> { };
     private bool isLoading = false;
+    private int matches = 0;
     public Job()
 	{
 		InitializeComponent();
@@ -116,14 +120,36 @@ public partial class Job : ContentPage
                         GetBoxViewElement(imgRow2, imgCol2).IsVisible = false;
                         GetImageElement(imgRow1, imgCol1).IsVisible = false;
                         GetImageElement(imgRow2, imgCol2).IsVisible = false;
+
+                        matches++;
+                        Money += 300;
+                        MoneyDisplay.Text = $"Money: ${Money}";
+                        SemanticScreenReader.Announce(MoneyDisplay.Text);
                     }
                     else
                     {
                         GetImageButtonElement(imgRow1, imgCol1).IsVisible = true;
                         GetImageButtonElement(imgRow2, imgCol2).IsVisible = true;
+
+                        Money -= 50;
+                        MoneyDisplay.Text = $"Money: ${Money}";
+                        SemanticScreenReader.Announce(MoneyDisplay.Text);
                     }
                     cardCoords.Clear();
                     isLoading = false;
+                    if(matches == 5)
+                    {
+                        if (Money >= 1000)
+                        {
+                            await Navigation.PushAsync(new GoodEnding(Money));
+                            Money = 0;
+                        }
+                        else
+                        {
+                            await Navigation.PushAsync(new BadEnding(Money));
+                            Money = 0;
+                        }
+                    }
                 }
             }
         }

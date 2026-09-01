@@ -4,7 +4,7 @@
              x:Class="RagsToRiches.Job"
              Title="Job">
     <ScrollView>
-        <Grid RowDefinitions="*, *, *"
+        <Grid RowDefinitions="*, *, *, *"
               ColumnDefinitions="*, *, *, *"
               x:Name="cardsGrid">
             <BoxView x:Name="BoxView1"
@@ -168,6 +168,15 @@
                          Grid.Row="2"
                          Grid.ColumnSpan="2"
                          Clicked="ImageButton_Clicked" />
+            <Label x:Name="MoneyDisplay"
+                   Grid.Row="3"
+                   Grid.ColumnSpan="4"
+                   Text="Money: $0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Padding="50"
+                   FontSize="40"
+                   TextColor="LightGreen"/>
         </Grid>
     </ScrollView>
 </ContentPage>
