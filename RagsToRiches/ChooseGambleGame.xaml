@@ -4,7 +4,8 @@
              x:Class="RagsToRiches.ChooseGambleGame"
              Title="Choose Your Gambling Game"
              Shell.BackgroundColor="black"
-             Shell.ForegroundColor="White">
+             Shell.ForegroundColor="White"
+             Shell.NavBarIsVisible="False">
 
     <Grid>
         <Image
